@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <meta
+      name="description"
+      content="Simple Password Generator with save function"
+    />
+    <link rel="stylesheet" href="style/passwordGenerator.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script defer src="script/passwordGenerator.js"></script>
+    <script defer src="script/sideBar.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <header class="logo">Password Generator</header>
+      </nav>
+      <div class="sidebar"></div>
+      <div class="savePassword">
+        <ul class="listOfPassword"></ul>
+      </div>
+      <div class="pwContainer">
+        <div class="resultContainer">
+          <div class="result"></div>
+          <div class="copy">📋</div>
+        </div>
+        <div class="rangeSelector">
+          <div id="rangeValue"></div>
+          <div class="fillRange"></div>
+          <input type="range" id="pwLength" min="8" max="30" />
+        </div>
+        <div class="includes">
+          <div class="checkBox">
+            <label>
+              <input type="checkbox" checked id="letters" />
+              <div class="custom-checkBox"></div>
+              Letters
+            </label>
+          </div>
+          <div class="checkBox">
+            <label>
+              <input type="checkbox" checked id="numbers" />
+              <div class="custom-checkBox"></div>
+              Numbers
+            </label>
+          </div>
+          <div class="checkBox">
+            <label>
+              <input type="checkbox" checked id="symbols" />
+              <div class="custom-checkBox"></div>
+              Symbols
+            </label>
+          </div>
+        </div>
+        <button class="save">Save</button>
+      </div>
+    </div>
+    <div class="modalConfirm">
+      <div class="box">
+        <div class="btn1">Copy</div>
+        <hr />
+        <div class="btn2">Delete</div>
+      </div>
+    </div>
+  </body>
+</html>
